@@ -7,15 +7,6 @@ import static org.junit.jupiter.api.Assertions.*;
 class PoliceCarTest {
 
     @Test
-    void addPassengerNoPoliceMan() {
-        PoliceCar policeCar = new PoliceCar(4);
-        Person person = new Person("Kevin",9);
-        assertThrows(WrongPassengerExeption.class, () -> {
-            policeCar.addPassenger(person);
-        });
-    }
-
-    @Test
     void addPassengerPoliceMan() {
         PoliceCar policeCar = new PoliceCar(4);
         Policeman policeman1 = new Policeman("Vlad",43);

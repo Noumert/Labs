@@ -1,8 +1,8 @@
 import java.util.HashSet;
 import java.util.Set;
 
-public abstract class Vehicle {
-    private Set<Person> passengers = new HashSet<>();
+public abstract class Vehicle<T extends Person> {
+    private Set<T> passengers = new HashSet<>();
 
     private int seats;
 
@@ -17,11 +17,11 @@ public abstract class Vehicle {
         return seats;
     }
 
-    public Set<Person> getPassengers() {
+    public Set<T> getPassengers() {
         return passengers;
     }
 
-    public void addPassenger(Person person){
+    public void addPassenger(T person){
         if (passengers.size() == maxPlaces()) {
             throw new NoPlaceExeption("Can not place more people then seats");
         }
@@ -38,7 +38,7 @@ public abstract class Vehicle {
         return passengers.size();
     }
 
-    public void getOffPerson(Person person) throws NoPassengerExeption {
+    public void getOffPerson(T person) throws NoPassengerExeption {
         if (!(passengers.contains(person))) {
             throw new NoPassengerExeption("This person not passenger");
         }
