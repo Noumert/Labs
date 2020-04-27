@@ -20,7 +20,7 @@ class EncoderTest {
             actual += scan.nextLine();
         }
         fr.close();
-        assertEquals(expected,actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -35,6 +35,6 @@ class EncoderTest {
             actual += scan.nextLine();
         }
         fr.close();
-        assertEquals(expected,actual);
+        assertEquals(expected, actual);
     }
 }
