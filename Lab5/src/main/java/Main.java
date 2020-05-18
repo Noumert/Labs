@@ -7,5 +7,6 @@ public class Main {
         List<String> text = workwithText.readFromFile("C:\\Users\\Vova\\Desktop\\Study\\s1.txt");
         text = workwithText.sort(text);
         workwithText.writeToFile(text,"C:\\Users\\Vova\\Desktop\\Study\\s2.txt");
+
     }
 }
